@@ -15,13 +15,13 @@ Jeweler::Tasks.new do |gem|
   gem.name = "jsivt_grapher"
   gem.homepage = "http://github.com/forforf/jsivt_grapher"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Converts a hash of nodes into the Javascript InfoVis Toolkit format}
+  gem.description = %Q{Converts a hash of nodes (a node being a hash of key/value pairs) into the formats for using the Javascript InfoVis Toolkit (thejit.org)}
   gem.email = "dmarti21@gmail.com"
   gem.authors = ["Dave M"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
+    gem.add_runtime_dependency 'json', '~> 1.5.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
