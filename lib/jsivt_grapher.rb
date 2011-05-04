@@ -11,9 +11,6 @@ class JsivtGrapher
     jit_keys = [@name_key, @children_key, @data_key] 
     @nodes = {}
     jit_nodes.each do |id,full_data|
-      #ok if id == 'tags'
-      #  puts "1"; p id; p full_data; p full_data[:id]; p full_data[:data]
-      #end
       jit_data = full_data.select{|k,v| jit_keys.include? k}
       @nodes[id] = jit_data
       @nodes[id][:data] = full_data || "no data"#repeats jit data, but that's ok
