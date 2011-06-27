@@ -38,7 +38,8 @@ class JsivtGrapher
   end
   
   def to_tree(top_node, depth)
-    raise "Can't find node: #{top_node.inspect} in the tree" unless @nodes[top_node] 
+    #raise "Can't find node: #{top_node.inspect} in the tree" unless @nodes[top_node] 
+    return {}.to_json unless @nodes[top_node]
     #puts "Tree Init, top node data: #{@nodes[top_node].inspect}"
     tree = jsivt_tree(top_node, depth)
     tree.to_json
